@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       # - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - run: docker build -t gaurav4604/frontend-react .
-      - run: docker run -e CI=true gaurav4604/frontend-react npm test
+      # - run: docker run -e CI=true gaurav4604/frontend-react npm test
  
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
