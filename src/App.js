@@ -9,7 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>Hot reload?</h1>
+        <h1>Hot reload!!! (changed via the feature branch)</h1>
       </header>
     </div>
   );
