@@ -2,8 +2,6 @@ version: "3"
 
 services:
   web-frontend-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: "gaurav4604/web-frontend"
     ports:
       - "3000:80"
