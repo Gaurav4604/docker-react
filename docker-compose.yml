@@ -1,21 +1,9 @@
 version: "3"
 
 services:
-  web-frontend:
+  web-frontend-prod:
     build:
-      context: . # <- represents that context for dockerfile exists in the current dir
-      dockerfile: Dockerfile.dev # <- tells docker compose about dockerfile to be used for building the container
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      - "/app/node_modules" # says use node_modules from the /app folder
-      - ".:/app" # says use reference of everything else, from the dev folder (in this case prod-workflow/frontend) into the app folder
-  web-frontend-tests:
-    build:
-      context: . # <- represents that context for dockerfile exists in the current dir
-      dockerfile: Dockerfile.dev # <- tells docker compose about dockerfile to be used for building the container
-    volumes:
-      - "/app/node_modules" # says use node_modules from the /app folder
-      - ".:/app" # says use reference of everything else, from the dev folder (in this case prod-workflow/frontend) into the app folder
-    # override start command from Dockerfile.dev
-    command: ["npm", "run", "test"]
+      - "3000:80"
