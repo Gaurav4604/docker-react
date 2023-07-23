@@ -4,4 +4,4 @@ services:
   web-frontend-prod:
     image: "gaurav4604/web-frontend"
     ports:
-      - "3000:80"
+      - "80:3000"
